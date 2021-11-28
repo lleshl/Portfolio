@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.myapplication.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <CheckBox
+            android:text="Stamp"
+            android:id="@+id/stamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/erase"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="초기화"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/open"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="최근 화면 불러오기"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/save"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="화면 저장"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <com.example.myapplication.MyCanvas
+        android:id="@+id/canv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <ImageButton
+            android:tag="rotate"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_rotate2"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:tag="bright"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_bright"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:tag="dark"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_dark"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:tag="skew"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/skew"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
